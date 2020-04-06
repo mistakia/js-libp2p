@@ -86,7 +86,7 @@ class Registrar {
     const storedConn = this.connections.get(id)
 
     if (storedConn) {
-      storedConn.push(conn)
+      storedConn.unshift(conn)
     } else {
       this.connections.set(id, [conn])
     }
